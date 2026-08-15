@@ -1,0 +1,352 @@
+/* Basis reset & tokens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paper: #f4ede1;
+    --paper-alt: #ece1cf;
+    --ink: #2c2317;
+    --ink-soft: #4a3f30;
+    --cognac: #935e35;
+    --olive: #6b6b48;
+    --rule: #c7b89a;
+    --rule-light: #ddd0b6;
+}
+
+body {
+    font-family: "Source Serif 4", Georgia, serif;
+    background-color: var(--paper-alt);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.hero {
+    background-color: var(--paper);
+    border-bottom: 1px solid var(--rule-light);
+    padding: 34px 0 26px;
+    margin-bottom: 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.profile-image-wrap {
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cognac);
+    padding: 3px;
+    background: var(--paper);
+}
+
+.eyebrow {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 4px;
+}
+
+.hero-text h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: var(--ink);
+    letter-spacing: 0.2px;
+    margin-bottom: 4px;
+}
+
+.hero-text h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--cognac);
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+
+.credentials {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+}
+
+.contact-info {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+}
+
+/* Cards */
+.card {
+    background: var(--paper);
+    border: 1px solid var(--rule-light);
+    border-radius: 3px;
+    padding: 18px 26px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    color: var(--cognac);
+    font-size: 1.02rem;
+    margin-bottom: 11px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--rule-light);
+}
+
+.profile-section p {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 9px;
+}
+
+.profile-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Werkervaring timeline */
+.timeline {
+    position: relative;
+    padding-left: 22px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--rule);
+}
+
+.job {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--cognac);
+}
+
+.job-head {
+    margin-bottom: 5px;
+}
+
+.job h4 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 0.96rem;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+.job .meta {
+    display: block;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.74rem;
+    letter-spacing: 0.4px;
+    color: var(--olive);
+}
+
+.job ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 4px;
+    font-size: 0.87rem;
+    color: var(--ink-soft);
+}
+
+.job ul li::before {
+    content: "\2014";
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-size: 0.78rem;
+}
+
+.job ul li.value {
+    color: var(--ink);
+    margin-top: 6px;
+}
+
+.job ul li.value::before {
+    content: "";
+}
+
+.job ul li.value strong {
+    color: var(--cognac);
+    font-weight: 600;
+}
+
+/* Plain lists (opleidingen, certificaten, talen) */
+.plain-list {
+    list-style: none;
+}
+
+.plain-list li {
+    margin-bottom: 9px;
+    font-size: 0.9rem;
+}
+
+.plain-list li:last-child {
+    margin-bottom: 0;
+}
+
+.plain-list li strong {
+    display: block;
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: var(--ink);
+    margin-bottom: 1px;
+}
+
+.plain-list .sub {
+    display: block;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+}
+
+.plain-list.inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.plain-list.inline li {
+    margin-bottom: 0;
+}
+
+/* Skills tags */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.tag {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--paper-alt);
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+    padding: 30px 0 50px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--ink-soft);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.78rem;
+}
+
+.monogram-small {
+    width: 26px;
+    height: 26px;
+    border: 1px solid var(--cognac);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--cognac);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .timeline {
+        padding-left: 18px;
+    }
+
+    .job::before {
+        left: -18px;
+    }
+
+    .plain-list.inline {
+        gap: 16px;
+    }
+}
+
+/* Print */
+@media print {
+    body {
+        background: var(--paper);
+    }
+
+    .card {
+        border: none;
+        box-shadow: none;
+    }
+
+    .job,
+    .plain-list li {
+        break-inside: avoid;
+    }
+
+    .hero {
+        border-bottom: none;
+    }
+}
